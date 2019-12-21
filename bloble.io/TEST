@@ -6,8 +6,8 @@
 			name: "Commander",
 			desc: "Powerful commander unit",
 			lockMaxBuy: true,
-			cost: 700,
-			unitSpawn: 18
+			cost: 1500,
+			unitSpawn: 9
 		}];
 	};
 	exports.getUnitList = function() {
@@ -20,7 +20,7 @@
 	    	reward: 3,
 	    	notUser: true,
 	    	uPath: [0],
-	    	space: 1,
+	    	space: 2,
 	    	type: 1,
 	    	size: 18,
 	    	speed: 0.18,
@@ -47,8 +47,9 @@
 	    		size: 30,
 	    		cost: 30,
 	    		health: 150,
-	    		dmg: 50,
-	    		upgrades: [{
+	    		dmg: 50
+	    	}, {
+	    		}]
 	    			name: "Spikes",
 	    			shape: "spike",
 	    			desc: "Strong spike that blocks incoming units",
@@ -57,7 +58,7 @@
 	    			type: 3,
 	    			size: 30,
 	    			cost: 100,
-	    			health: 200,
+	    			health: 100,
 	    			dmg: 100
 	    		}]
 	    	}, {
@@ -72,7 +73,7 @@
 		    	cost: 30,
 		    	health: 50,
 		    	dmg: 10,
-		    	pts: 10.5
+		    	pts: 1
 	    	}]
 	    }, {
 	    	name: "Simple Turret",
@@ -82,7 +83,7 @@
 	    	uPath: [2],
 	    	type: 0,
 	    	size: 29,
-	    	cost: 25,
+	    	cost: 13,
 	    	turretIndex: 1,
 	    	range: 180,
 	    	reload: 800,
@@ -96,7 +97,7 @@
 	    		uPath: [2,0],
 	    		type: 0,
 	    		size: 30,
-	    		cost: 60,
+	    		cost: 30,
 	    		turretIndex: 2,
 	    		range: 180,
 	    		reload: 400,
@@ -110,7 +111,7 @@
 	    			uPath: [2,0,0],
 	    			type: 0,
 	    			size: 30,
-	    			cost: 100,
+	    			cost: 50,
 	    			turretIndex: 7,
 	    			range: 180,
 	    			reload: 140,
@@ -125,7 +126,7 @@
 	    		uPath: [2,1],
 	    		type: 0,
 	    		size: 30,
-	    		cost: 60,
+	    		cost: 30,
 	    		turretIndex: 3,
 	    		range: 240,
 	    		reload: 800,
@@ -140,7 +141,7 @@
 	    			uPath: [2,1,0],
 	    			type: 0,
 	    			size: 30,
-	    			cost: 100,
+	    			cost: 50,
 	    			turretIndex: 10,
 	    			range: 290,
 	    			reload: 800,
@@ -157,10 +158,10 @@
 	    	type: 0,
 	    	size: 32,
 	    	iSize: 0.55,
-	    	cost: 50,
+	    	cost: 25,
 	    	health: 50,
 	    	dmg: 10,
-	    	pts: 1,
+	    	pts: 2,
 	    	upgrades: [{
 	    		name: "Power Plant",
 	    		shape: "octagon",
@@ -170,10 +171,10 @@
 	    		type: 0,
 	    		size: 32,
 	    		iSize: 0.6,
-	    		cost: 100,
+	    		cost: 50,
 	    		health: 80,
 	    		dmg: 10,
-	    		pts: 1.5
+	    		pts: 3
 	    	}]
 	    }, {
 	    	name: "House",
@@ -184,10 +185,10 @@
 	    	type: 0,
 	    	size: 30,
 	    	iSize: 0.3,
-	    	cost: 60,
+	    	cost: 30,
 	    	health: 40,
 	    	dmg: 10,
-	    	lmt: [10,3]
+	    	lmt: [0,6]
 	    }, {
 	    	name: "Sniper Turret",
 	    	shape: "circle",
@@ -196,7 +197,7 @@
 	    	uPath: [5],
 	    	type: 0,
 	    	size: 32,
-	    	cost: 80,
+	    	cost: 40,
 	    	turretIndex: 4,
 	    	range: 240,
 	    	reload: 2000,
@@ -211,7 +212,7 @@
 	    		uPath: [5, 0],
 	    		type: 0,
 	    		size: 32,
-	    		cost: 180,
+	    		cost: 90,
 	    		turretIndex: 5,
 	    		range: 240,
 	    		reload: 1000,
@@ -227,7 +228,7 @@
 	    		uPath: [5, 1],
 	    		type: 0,
 	    		size: 32,
-	    		cost: 300,
+	    		cost: 150,
 	    		turretIndex: 6,
 	    		range: 280,
 	    		reload: 4500,
@@ -244,7 +245,7 @@
 	    	reward: 100,
 	    	notUser: true,
 	    	uPath: [6],
-	    	space: 7,
+	    	space: 15,
 	    	type: 1,
 	    	size: 31,
 	    	speed: 0.05,
@@ -260,7 +261,7 @@
 	    	type: 0,
 	    	size: 40,
 	    	renderIndex: 3,
-	    	cost: 100,
+	    	cost: 50,
 	    	health: 90,
 	    	dmg: 30,
 	    	upgrades: [{
@@ -282,7 +283,7 @@
 	    		desc: "Adds cannons to tank units",
 	    		powerup: true,
 	    		uPath: [7, 2],
-	    		cost: 5000,
+	    		cost: 500,
 	    		uVals: [6, 'turretIndex', 8, 'tDmg', 10, 'reload', 900, 'range', 200, 'shoot', true, 'target', 1]
 	    	}, {
 	    		name: "Cloaking Device",
@@ -302,7 +303,7 @@
 	    	type: 2,
 	    	size: 34,
 	    	iSize: 0.55,
-	    	cost: 150,
+	    	cost: 75,
 	    	reload: 3500,
 	    	unitSpawn: 0,
 	    	health: 60,
@@ -378,7 +379,7 @@
 	    		powerup: true,
 	    		removeOthers: true,
 	    		uPath: [9, 0],
-	    		cost: 500,
+	    		cost: 250,
 	    		lmt: [0,20]
 	    	}]
 	    }, {
